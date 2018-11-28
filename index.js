@@ -25,7 +25,6 @@ function checkCollision(rock) {
   // implement me!
   // use the comments below to guide you!
   const top = positionToInteger(rock.style.top);
-  console.log("checkCollision top = ", top);
   if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left);
     const dodgerRightEdge = dodgerLeftEdge + DODGER_WIDTH ;
@@ -81,6 +80,7 @@ function createRock(x) {
  */
 function endGame() {
   console.log("GAME OVER MAN!")
+  
 }
 
 function moveDodger(e) {
