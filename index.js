@@ -79,6 +79,10 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  window.clearInterval(gameInterval)
+  for (var i = 0; i < ROCKS.length; i ++){
+    ROCKS.remove();
+  }
   console.log("GAME OVER MAN!")
   
 }
