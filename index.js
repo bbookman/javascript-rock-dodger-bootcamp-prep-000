@@ -37,7 +37,6 @@ function checkCollision(rock) {
               (rockLeftEdge > dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) ||
               (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge)
         ) {
-      console.log("COLLISION!!!")
       return true;
     } else {
       return false;
@@ -60,10 +59,12 @@ function createRock(x) {
     rock.style.top = `${top += 2}px`;
  
     if (checkCollision){
+      log.console("COLLISION!!!")
       return endGame();
     }
     
     if (top < GAME_HEIGHT){
+      
       window.requestAnimationFrame(moveRock);
     } else {
       rock.remove();
