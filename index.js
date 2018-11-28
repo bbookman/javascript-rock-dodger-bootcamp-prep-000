@@ -32,18 +32,14 @@ function checkCollision(rock) {
     const rockLeftEdge = positionToInteger(rock.style.left);
     const rockRightEdge = rockLeftEdge + ROCK_WIDTH ;
 
-    if (    /*
-            rockLeftEdge <= dodgerLeftEdge && rockRightEdge > dodgerLeftEdge
-             rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge 
-            */
+    if (
               (rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
               (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) ||
-              (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge)
+              (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge)
         ) {
       return true;
-    } else {
-      return false;
-    }
+    } 
+    return false;
   }
 }
 
