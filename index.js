@@ -32,7 +32,10 @@ function checkCollision(rock) {
     const rockLeftEdge = positionToInteger(rock.style.left);
     const rockRightEdge = rockLeftEdge + ROCK_WIDTH ;
 
-    if (
+    if (    /*
+            rockLeftEdge <= dodgerLeftEdge && rockRightEdge > dodgerLeftEdge
+            
+            */
               (rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
               (rockLeftEdge > dodgerLeftEdge && rockRightEdge <= dodgerRightEdge) ||
               (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge)
