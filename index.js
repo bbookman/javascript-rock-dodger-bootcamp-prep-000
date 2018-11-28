@@ -83,7 +83,7 @@ function endGame() {
   for (var i = 0; i < ROCKS.length; i ++){
     ROCKS.remove();
   }
-  window.removeEventListener('keydown', moveDodger)
+  window.removeEventListener('keydown', moveDodger);
   console.log("GAME OVER MAN!");
   
 }
