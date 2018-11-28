@@ -39,6 +39,8 @@ function checkCollision(rock) {
         ) {
       console.log("COLLISION!!!")
       return true;
+    } else {
+      return false;
     }
   }
 }
