@@ -59,7 +59,7 @@ function createRock(x) {
     rock.style.top = `${top += 2}px`;
  
     if (checkCollision){
-      log.console("COLLISION!!!")
+      console.log("COLLISION!!!")
       return endGame();
     }
     
