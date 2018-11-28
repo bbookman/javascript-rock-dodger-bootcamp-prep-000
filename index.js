@@ -81,7 +81,7 @@ function createRock(x) {
 function endGame() {
   window.clearInterval(gameInterval);
   for (var i = 0; i < ROCKS.length; i ++){
-    ROCKS.pop();
+    ROCKS == 
   }
   window.removeEventListener('keydown', moveDodger);
   console.log("GAME OVER MAN!");
